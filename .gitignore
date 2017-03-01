@@ -1,0 +1,6 @@
+node_modules
+.idea
+.chewie-app
+!.chewie-app/index.js
+.dev/.system
+.dev/.chewie
