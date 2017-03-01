@@ -4,9 +4,9 @@ let schedule = require('node-schedule');
 
 class Trigger {
 
-    constructor(plugin, helper, info) {
+    constructor(plugin, info) {
         this.info = info;
-        this.helper = helper;
+        this.helper = plugin.helper;
         this.interval = null;
     }
 

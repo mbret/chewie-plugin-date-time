@@ -16,6 +16,7 @@ chewie.start({
                     .catch(done);
             }
         },
+        "alwaysSynchronizePlugins": true,
         "system": {
             "tmpDir": "./.chewie/.tmp",
             "appDataPath": "./.chewie"
