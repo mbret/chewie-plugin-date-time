@@ -10,7 +10,7 @@ class Trigger {
         this.interval = null;
     }
 
-    onNewDemand(options, cb, done) {
+    newDemand(options, cb, done) {
         let self = this;
         if (this.info.id === "interval") {
             this.interval = this._watchInterval(options, cb);
@@ -29,13 +29,14 @@ class Trigger {
         }
     }
 
-    stop() {
+    stop(done) {
         // detect timeout
         if (this.interval && this.interval._idleTimeout) {
             clearTimeout(this.interval);
         } else {
             clearInterval(this.interval);
         }
+        return done();
     }
 
     _watchInterval(options, cb) {
