@@ -1,6 +1,6 @@
 module.exports = {
 
-    mount: function(chewie, helper, done) {
+    mount: function(done) {
         return done();
     },
 
